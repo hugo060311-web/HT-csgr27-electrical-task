@@ -15,3 +15,8 @@ cmake-build-*/
 .claude.json
 
 .DS_Store
+
+.vs/
+out/
+*.user
+~$*

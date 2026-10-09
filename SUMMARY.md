@@ -1,0 +1,7 @@
+# Shutdown summary
+
+The controller keeps the system ON only when the safety-related readings are available and plausible. It switches the system OFF if BMS or inverter communications fail, their data is more than 1,000 ms old, any cell voltage is below 3,000 mV or above 4,200 mV, either battery temperature reading reaches 60 °C, or the inverter reports a fault or is not running. It also switches OFF if the door/tamper input is triggered, the relay feedback disagrees with its command, the grid is present outside 207–253 V or 49–51 Hz, or the grid is absent while the relay is commanded or reported closed. For a shutdown, the logic requests the grid relay to open and turns on the buzzer and notification flag.
+
+If the grid is absent and the relay is confirmed open, the system stays ON without an alarm. This assumes the inverter can operate safely in island mode. Zero PV output is not treated as a fault because it can occur normally, such as at night. Pack current is checked for a valid numeric value, but no current limit is applied because the task gives no pack rating or limit.
+
+All numerical limits are assumptions for this software exercise, not certified battery or grid protection settings. Real limits must come from the battery, BMS, inverter and applicable grid requirements. The provided relay interface is a mock; this code does not prove that physical contacts open. AI assistance was used to draft and review the `data_is_stale()` and `evaluate_system_state()` functions. AI was also used to draft this summary.
