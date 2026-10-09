@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1220" viewBox="0 0 2000 1220">
+<rect width="100%" height="100%" fill="white"/>
+<text x="45" y="59.86" font-family="Times New Roman" font-size="42" font-weight="bold" fill="#18232e">C.1  12 V coil: low-side drive and local turn-off clamp</text>
+<text x="45" y="114.07" font-family="Times New Roman" font-size="29" font-weight="normal" fill="#18232e">Schematic proposal | filled dots = connected nets | A = anode; K = cathode</text>
+<text x="45" y="179.9" font-family="Times New Roman" font-size="30" font-weight="bold" fill="#18232e">Protected LV supply</text>
+<polyline points="80,235 145,235" fill="none" stroke="#18232e" stroke-width="4"/>
+<rect x="145" y="200" width="225" height="70" fill="none" stroke="#18232e" stroke-width="3"/>
+<text x="165" y="236.9" font-family="Times New Roman" font-size="30" font-weight="normal" fill="#18232e">SDC high-side</text>
+<polyline points="370,235 430,235" fill="none" stroke="#18232e" stroke-width="4"/>
+<rect x="430" y="207" width="170" height="56" fill="none" stroke="#18232e" stroke-width="3"/>
+<text x="450" y="241.9" font-family="Times New Roman" font-size="30" font-weight="normal" fill="#18232e">F1  1 A</text>
+<text x="410" y="312.41" font-family="Times New Roman" font-size="27" font-weight="normal" fill="#18232e">0287001.PXCN</text>
+<text x="75" y="343.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">External harness: F1 near branch origin</text>
+<polyline points="600,235 1100,235 1100,330" fill="none" stroke="#18232e" stroke-width="4"/>
+<circle cx="690" cy="235" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="690" y="213.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">J1.1 SDC_COIL_12</text>
+<circle cx="1000" cy="235" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="1000" y="288.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">TP1</text>
+<circle cx="1100" cy="330" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="885" y="323.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">J2.1 COIL+</text>
+<rect x="1060" y="360" width="80" height="70" fill="none" stroke="#18232e" stroke-width="3"/>
+<polyline points="1100,330 1100,360" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="1170" y="395.73" font-family="Times New Roman" font-size="31" font-weight="normal" fill="#18232e">Coil R = 24 ohm*</text>
+<polyline points="1100,430 1100,460" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1100.0,460.0 1104.067296091046,461.75 1108.0344418537486,463.5 1111.8037529932283,465.25 1115.2824165596044,467.0 1118.3847763108502,468.75 1121.0344418537486,470.5 1123.1661696288975,472.25 1124.727469423674,474.0 1125.6798968554735,475.75 1126.0,477.5 1125.6798968554735,479.25 1124.727469423674,481.0 1123.1661696288975,482.75 1121.0344418537486,484.5 1118.3847763108502,486.25 1115.2824165596044,488.0 1111.8037529932283,489.75 1108.0344418537486,491.5 1104.067296091046,493.25 1100.0,495.0" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1100.0,495.0 1104.067296091046,496.75 1108.0344418537486,498.5 1111.8037529932283,500.25 1115.2824165596044,502.0 1118.3847763108502,503.75 1121.0344418537486,505.5 1123.1661696288975,507.25 1124.727469423674,509.0 1125.6798968554735,510.75 1126.0,512.5 1125.6798968554735,514.25 1124.727469423674,516.0 1123.1661696288975,517.75 1121.0344418537486,519.5 1118.3847763108502,521.25 1115.2824165596044,523.0 1111.8037529932283,524.75 1108.0344418537486,526.5 1104.067296091046,528.25 1100.0,530.0" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1100.0,530.0 1104.067296091046,531.75 1108.0344418537486,533.5 1111.8037529932283,535.25 1115.2824165596044,537.0 1118.3847763108502,538.75 1121.0344418537486,540.5 1123.1661696288975,542.25 1124.727469423674,544.0 1125.6798968554735,545.75 1126.0,547.5 1125.6798968554735,549.25 1124.727469423674,551.0 1123.1661696288975,552.75 1121.0344418537486,554.5 1118.3847763108502,556.25 1115.2824165596044,558.0 1111.8037529932283,559.75 1108.0344418537486,561.5 1104.067296091046,563.25 1100.0,565.0" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1100,565 1100,645" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="1170" y="520.73" font-family="Times New Roman" font-size="31" font-weight="normal" fill="#18232e">L = 100 mH*</text>
+<text x="1170" y="563.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">*Model assumptions</text>
+<circle cx="1100" cy="625" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="885" y="623.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">J2.2 COIL-</text>
+<polyline points="1100,235 1670,235 1670,310" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1670,310 1670,350" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1670,400 1670,440" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1645,350 1695,350 1670,400 1645,350" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1640,400 1700,400" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1640,388 1640,400 1700,400 1700,412" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1670,440 1670,470" fill="none" stroke="#18232e" stroke-width="4"/>
+<circle cx="1670" cy="455" r="6" fill="#18232e"/>
+<polyline points="1670,470 1670,510" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1670,560 1670,600" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1645,560 1695,560 1670,510 1645,560" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1640,510 1700,510" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1670,600 1670,645 1100,645" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="1730" y="354.9" font-family="Times New Roman" font-size="30" font-weight="bold" fill="#18232e">TVS1</text>
+<text x="1730" y="393.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">SMBJ18A</text>
+<text x="1620" y="325.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">A</text>
+<text x="1620" y="431.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">K</text>
+<text x="1730" y="514.9" font-family="Times New Roman" font-size="30" font-weight="bold" fill="#18232e">D1 UF4004</text>
+<text x="1620" y="498.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">K</text>
+<text x="1620" y="603.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">A</text>
+<text x="1330" y="724.07" font-family="Times New Roman" font-size="29" font-weight="normal" fill="#18232e">D1 and TVS1: cathode-to-cathode</text>
+<text x="1330" y="768.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">Turn-off: drain -&gt; D1 -&gt; TVS1</text>
+<text x="1330" y="808.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">-&gt; COIL+ -&gt; coil -&gt; drain</text>
+<circle cx="1100" cy="235" r="6" fill="#18232e"/>
+<circle cx="1100" cy="645" r="6" fill="#18232e"/>
+<circle cx="1300" cy="645" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="1300" y="623.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">TP2 DRAIN</text>
+<polyline points="1100,645 1100,700 1040,700 1040,875 1100,875 1100,950" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1010,735 1010,850" fill="none" stroke="#18232e" stroke-width="6"/>
+<polyline points="995,725 995,860" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1040,700 1040,745 1010,745" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1010,835 1040,835" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="1145" y="858.22" font-family="Times New Roman" font-size="34" font-weight="bold" fill="#18232e">Q1 IRL540NPBF</text>
+<text x="1145" y="898.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">D = pin 2 / tab; S = pin 3</text>
+<text x="1055" y="755.75" font-family="Times New Roman" font-size="25" font-weight="normal" fill="#18232e">D</text>
+<text x="1055" y="915.75" font-family="Times New Roman" font-size="25" font-weight="normal" fill="#18232e">S</text>
+<polyline points="80,790 270,790" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="270,790 295,790" fill="none" stroke="#18232e" stroke-width="4"/>
+<rect x="295" y="775" width="70" height="30" fill="none" stroke="#18232e" stroke-width="3"/>
+<polyline points="365,790 390,790" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="270" y="755.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">RG 1 kohm</text>
+<polyline points="390,790 995,790" fill="none" stroke="#18232e" stroke-width="4"/>
+<circle cx="80" cy="790" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="80" y="748.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">J1.2 CMD12</text>
+<text x="80" y="858.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">0 / 12 V, LV_RETURN reference</text>
+<circle cx="550" cy="790" r="6" fill="#18232e"/>
+<circle cx="600" cy="790" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="600" y="763.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">TP3 GATE</text>
+<text x="875" y="738.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">G pin 1</text>
+<polyline points="550,820 550,845" fill="none" stroke="#18232e" stroke-width="4"/>
+<rect x="535" y="845" width="30" height="70" fill="none" stroke="#18232e" stroke-width="3"/>
+<polyline points="550,915 550,940" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="575" y="883.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">RPD 100 kohm</text>
+<polyline points="550,790 550,820" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="550,940 550,950" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="810,790 810,820" fill="none" stroke="#18232e" stroke-width="4"/>
+<circle cx="810" cy="790" r="6" fill="#18232e"/>
+<polyline points="810,820 810,860" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="810,910 810,950" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="785,910 835,910 810,860 785,910" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="780,860 840,860" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="780,848 780,860 840,860 840,872" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="850" y="883.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">DZ1 12 V</text>
+<text x="765" y="841.58" font-family="Times New Roman" font-size="26" font-weight="normal" fill="#18232e">K</text>
+<text x="760" y="936.58" font-family="Times New Roman" font-size="26" font-weight="normal" fill="#18232e">A</text>
+<polyline points="80,950 1100,950" fill="none" stroke="#18232e" stroke-width="4"/>
+<circle cx="550" cy="950" r="6" fill="#18232e"/>
+<circle cx="810" cy="950" r="6" fill="#18232e"/>
+<circle cx="80" cy="950" r="8" fill="white" stroke="#18232e" stroke-width="3"/>
+<text x="80" y="1003.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">J1.3 LV_RETURN</text>
+<polyline points="1100,950 1100,970" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1070,970 1130,970" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1080,980 1120,980" fill="none" stroke="#18232e" stroke-width="4"/>
+<polyline points="1090,990 1110,990" fill="none" stroke="#18232e" stroke-width="4"/>
+<text x="1030" y="1028.24" font-family="Times New Roman" font-size="28" font-weight="normal" fill="#18232e">LV_RETURN</text>
+<text x="45" y="1114.9" font-family="Times New Roman" font-size="30" font-weight="normal" fill="#18232e">Mount D1/TVS1 close to coil switching loop. Keep gate return separate from coil-current routing.</text>
+<text x="45" y="1164.9" font-family="Times New Roman" font-size="30" font-weight="normal" fill="#18232e">SDC removes coil power independently of CMD12. This drawing contains no tractive-system wiring.</text>
+</svg>
