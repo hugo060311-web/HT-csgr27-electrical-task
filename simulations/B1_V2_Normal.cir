@@ -1,0 +1,9 @@
+* B1 V2 Normal - numeric nodes for Multisim XSPICE
+* Node 1: pack voltage. Node 2: DC-link bus voltage.
+* Node 3: current monitor, 1 V represents 1 A through Rpre.
+V1 1 0 DC 116.8
+Rpre 1 2 100
+C1 2 0 0.0022 IC=0
+Rleak 2 0 1e9
+Emonitor 3 0 1 2 0.01
+.end

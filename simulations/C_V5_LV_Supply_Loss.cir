@@ -1,0 +1,48 @@
+* C_V5_LV_Supply_Loss - V5 functional ABM, not physical semiconductor models
+VLV 1 0 DC 12 PWL(0 12 30m 12 30.001m 0)
+* Model-independent high-side SDC, 0.05 ohm ON / 1 Gohm OFF
+GSDC 1 2 VALUE={V(1,2)*(1e-9+19.999999999*MIN(MAX(V(9),0),1))}
+RF1 2 3 0.078
+RCOIL 3 4 24
+LCOIL 4 5 100m
+* Functional MOSFET equivalent: 0.05 ohm fully ON above 3 V gate
+GDRV 5 0 VALUE={V(5)*(1e-9+19.999999999*MIN(MAX((V(6)-2.5)/0.5,0),1))}
+* Reverse body-diode equivalent
+GBODY 0 5 VALUE={MAX(-V(5)-0.7,0)/0.1}
+* Diode + TVS functional series clamp across the R-L coil
+* Iclamp = MAX(Vdrain - Vcoilplus - 21.8,0) / 0.45
+GCLAMP 5 3 VALUE={MAX(V(5,3)-21.8,0)/0.45}
+CDS 5 0 1n
+VCMD 7 0 DC 0 PULSE(0 12 5m 1u 1u 35m 200m)
+RG 7 6 1k
+RPD 6 0 100k
+CGS 6 0 2n
+* 12 V gate clamp and reverse protection, functional equivalent
+GZG 6 0 VALUE={MAX(V(6)-12,0)/20-MAX(-V(6)-0.7,0)/0.1}
+VSDC 9 0 DC 1
+VFIELD 10 0 DC 12
+GAUX 10 11 VALUE={V(10,11)*(1e-9+19.999999999*MIN(MAX(V(14),0),1))}
+RLED 11 12 1.8k
+* LED: 1.3 V knee + 10 ohm dynamic resistance; approximate only
+GLED 12 13 VALUE={MAX(V(12,13)-1.3,0)/10+1e-9*V(12,13)}
+RSENSE 13 0 1
+GREV 0 12 VALUE={MAX(-V(12)-0.7,0)/1}
+* Optocoupler functional output: CTR 20%, smooth 0.1 V saturation knee
+* Positive output current flows C(22) -> E(20); sense input Iled=V(13)/1
+GPHOTO 22 20 VALUE={0.2*MAX(V(13),0)*TANH(V(22,20)/0.1)}
+COPTO 22 20 100p
+RLEAK 22 20 100Meg
+RPU 21 22 10k
+ROUT 22 24 1k
+CF 24 20 10n
+VLOGIC 21 20 DC 5
+VAUX 14 0 DC 0 PULSE(0 1 10m 1u 1u 60m 200m)
+RREF 20 0 1G
+* Differential monitor outputs, not hardware components
+EFBMON 25 0 24 20 1
+EV5MON 26 0 21 20 1
+* Version marker: plot V(100) must be 5.05 V
+VVERSION 100 0 DC 5.05
+.options RELTOL=1e-4 ABSTOL=1n VNTOL=1u
+.tran 10u 100m 0 1u
+.end
