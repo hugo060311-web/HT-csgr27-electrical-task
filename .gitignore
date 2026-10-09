@@ -1,0 +1,17 @@
+docs/
+
+build/
+cmake-build-*/
+*.o
+*.elf
+*.uf2
+*.bin
+*.hex
+
+.vscode/
+.idea/
+
+.claude/
+.claude.json
+
+.DS_Store

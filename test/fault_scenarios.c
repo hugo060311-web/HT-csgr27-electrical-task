@@ -1,0 +1,373 @@
+/*
+ * Predefined scenarios covering nominal operation and a range of single and
+ * combined fault conditions across the components. Feel free to edit these
+ * or add your own for your own testing. Submissions are evaluated against
+ * whatever is committed here at the deadline.
+ */
+
+#include "fault_scenarios.h"
+
+const FaultScenario FAULT_SCENARIOS[] = {
+    {
+        .name = "nominal_operation",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "battery_over_temperature",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 85.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "cell_under_voltage",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 2800, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "cell_over_voltage",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 4300, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "bms_comms_lost",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = false,
+                .last_update_ms = 50000,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "inverter_comms_lost",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = false,
+                .last_update_ms = 50000,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "bms_stale_despite_comms_ok",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 20000,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "inverter_stale_despite_comms_ok",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 20000,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "door_triggered_alone",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = true, .timestamp_ms = 99900 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "door_triggered_with_bms_comms_lost",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = false,
+                .last_update_ms = 50000,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = true, .timestamp_ms = 99900 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "relay_stuck_open",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = false },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "relay_stuck_closed",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = false, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "grid_absent",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 0.0f, .frequency_hz = 0.0f, .present = false },
+            .relay = { .commanded_closed = false, .feedback_closed = false },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "grid_out_of_band",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 3700, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 25.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 260.0f, .frequency_hz = 52.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = false, .timestamp_ms = 0 },
+            .sim_time_ms = 100000,
+        },
+    },
+    {
+        .name = "multiple_simultaneous_faults",
+        .world = {
+            .bms = {
+                .cell_voltages_mv = {3700, 3700, 3700, 2800, 3700, 3700, 3700, 3700},
+                .pack_current_a = -2.5f,
+                .pack_temp_c = 25.0f,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .batt_temp = { .temp_c = 85.0f, .valid = true },
+            .inverter = {
+                .running = true,
+                .fault_code = 0,
+                .comms_ok = true,
+                .last_update_ms = 99950,
+            },
+            .pv = { .voltage_v = 380.0f, .current_a = 8.0f },
+            .grid = { .voltage_v = 230.0f, .frequency_hz = 50.0f, .present = true },
+            .relay = { .commanded_closed = true, .feedback_closed = true },
+            .door = { .triggered = true, .timestamp_ms = 99900 },
+            .sim_time_ms = 100000,
+        },
+    },
+};
+
+const size_t NUM_FAULT_SCENARIOS = sizeof(FAULT_SCENARIOS) / sizeof(FAULT_SCENARIOS[0]);
