@@ -1,0 +1,23 @@
+﻿Reference,Fitted quantity,Manufacturer,Part number,Specification / packaging,Distributor URL,Distributor,Stock shown / 2026-10-09
+Q1,1,Infineon,IRL540NPBF,"100 V N-MOSFET, TO-220; 1=G, 2=D, 3=S",https://www.digikey.co.uk/en/products/detail/infineon-technologies/IRL540NPBF/812000,DigiKey,"67,882"
+TVS1,1,Littelfuse,SMBJ18A,"Unidirectional, 18 V standoff; 29.2 V specified clamp",https://www.digikey.co.uk/en/products/detail/littelfuse-inc/SMBJ18A/285984,DigiKey,"43,873"
+D1,1,Vishay,UF4004-E3/54,"1 A, 400 V fast rectifier, axial",https://www.digikey.co.uk/en/products/detail/vishay-general-semiconductor-diodes-division/UF4004-E3-54/604945,DigiKey,"56,404"
+DZ1,1,Vishay,BZX55C12-TAP,"12 V gate zener, DO-35",https://www.digikey.co.uk/en/products/detail/vishay-general-semiconductor-diodes-division/BZX55C12-TAP/4810511,DigiKey,"3,663"
+D2,1,Vishay,1N4148-TAP,"Reverse LED protection diode, axial",https://www.digikey.co.uk/en/products/detail/vishay-general-semiconductor-diodes-division/1N4148-TAP/3104053,DigiKey,"24,564"
+U1,1,Vishay,VO617A-4,"CTR group 4, DIP-4 optocoupler",https://www.mouser.com/en/ProductDetail/Vishay-Semiconductors/VO617A-4?qs=s4XK1XdnRil81zt1mZpWDg%3D%3D,Mouser,"3,809 (indexed page)"
+F1,1,Littelfuse,0287001.PXCN,"1 A, 32 V DC ATOF; 1 kA interrupt rating",https://www.digikey.co.uk/en/products/detail/littelfuse-inc/0287001-PXCN/3102551,DigiKey,"13,275"
+F1 holder,1,Littelfuse,0FHA0001ZXJ,"ATO inline holder, 32 V / 20 A",https://www.digikey.co.uk/en/products/detail/littelfuse-commercial-vehicle-products/0FHA0001ZXJ/2004051,DigiKey,"2,373"
+"RG, ROUT",2,Vishay,MRS25000C1001FCT00,"1 kohm, 1%, 0.6 W axial",https://www.digikey.co.uk/en/products/detail/vishay-beyschlag-draloric-bc-components/MRS25000C1001FCT00/5063977,DigiKey,"35,808"
+RPU,1,Vishay,MRS25000C1002FCT00,"10 kohm, 1%, 0.6 W axial",https://www.digikey.co.uk/en/products/detail/vishay-beyschlag-draloric-bc-components/MRS25000C1002FCT00/5063978,DigiKey,"25,024"
+RPD,1,Vishay,MRS25000C1003FCT00,"100 kohm, 1%, 0.6 W axial",https://www.digikey.co.uk/en/products/detail/vishay-beyschlag-draloric-bc-components/MRS25000C1003FCT00/5063979,DigiKey,"7,083"
+RLED,1,Vishay,MRS25000C1801FCT00,"1.8 kohm, 1%, 0.6 W axial",https://www.digikey.co.uk/en/products/detail/vishay-beyschlag-draloric-bc-components/MRS25000C1801FCT00/7350486,DigiKey,"9,744"
+CF,1,KEMET,C315C103J1G5TA,"10 nF, 5%, 100 V C0G radial",https://www.digikey.co.uk/en/products/detail/kemet/C315C103J1G5TA/6646408,DigiKey,"1,457"
+CDEC,1,KEMET,C315C104K5R5TA,"100 nF, 10%, 50 V X7R radial",https://www.digikey.co.uk/en/products/detail/kemet/C315C104K5R5TA/12701330,DigiKey,"7,310"
+J1 header,1,JST,B5P-VH(LF)(SN),"5-way VH, 3.96 mm; distributor base name B5P-VH",https://www.digikey.co.uk/en/products/detail/jst-sales-america-inc/B5P-VH/926550,DigiKey,"6,855 (indexed page)"
+J2 header,1,JST,B4P-VH(LF)(SN),"4-way VH, 3.96 mm; base name B4P-VH",https://www.digikey.co.uk/en/products/detail/jst-sales-america-inc/B4P-VH/926549,DigiKey,See live page
+J3 header,1,JST,B3B-XH-A(LF)(SN),"3-way XH, 2.5 mm",https://www.mouser.co.uk/en/ProductDetail/JST-Commercial/B3B-XH-ALFSN?qs=cdbOS8ANM9BVkoboCCIEMQ%3D%3D,Mouser,613 (indexed page)
+J1 housing,1,JST,VHR-5N,5-way mating housing,https://www.digikey.co.uk/en/products/detail/jst-sales-america-inc/VHR-5N/608627,DigiKey,"27,664"
+J2 housing,1,JST,VHR-4N,4-way mating housing,https://www.digikey.co.uk/en/products/detail/jst-sales-america-inc/VHR-4N/608626,DigiKey,"186,137"
+J3 housing,1,JST,XHP-3,3-way mating housing,https://www.digikey.co.uk/en/products/detail/jst-sales-america-inc/XHP-3/1651017,DigiKey,"106,708 (indexed page)"
+J1/J2 contacts,8,JST,SVH-21T-P1.1,18–22 AWG; fitted 4 + 4; listed CT MOQ 100,https://www.digikey.co.uk/en/products/detail/jst-sales-america-inc/SVH-21T-P1-1/527368,DigiKey,"1,494,036 (indexed page)"
+J3 contacts,3,JST,SXH-001T-P0.6,22–28 AWG; RS 123-5947 tape MOQ 250,https://uk.rs-online.com/web/p/crimp-contacts/1235947,RS,"12,000 + 31,500 at other location"
