@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "CSGR27 Electrical",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led_on", "top": -40, "left": 260, "attrs": { "color": "green", "label": "SYSTEM ON" } },
+    { "type": "wokwi-resistor", "id": "r_on", "top": 0, "left": 260, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led_off", "top": -40, "left": 340, "attrs": { "color": "red", "label": "SYSTEM OFF" } },
+    { "type": "wokwi-resistor", "id": "r_off", "top": 0, "left": 340, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led_notification", "top": -40, "left": 420, "attrs": { "color": "yellow", "label": "NOTIFICATION" } },
+    { "type": "wokwi-resistor", "id": "r_notification", "top": 0, "left": 420, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 100, "left": 260, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "door_switch", "top": 100, "left": 380, "attrs": { "label": "DOOR/TAMPER" } }
+  ],
+  "connections": [
+    ["pico:GP2", "r_on:1", "green", []],
+    ["r_on:2", "led_on:A", "green", []],
+    ["led_on:C", "pico:GND.1", "black", []],
+
+    ["pico:GP3", "r_off:1", "red", []],
+    ["r_off:2", "led_off:A", "red", []],
+    ["led_off:C", "pico:GND.2", "black", []],
+
+    ["pico:GP5", "r_notification:1", "yellow", []],
+    ["r_notification:2", "led_notification:A", "yellow", []],
+    ["led_notification:C", "pico:GND.3", "black", []],
+
+    ["pico:GP4", "buzzer:2", "orange", []],
+    ["buzzer:1", "pico:GND.4", "black", []],
+
+    ["pico:GP6", "door_switch:1.l", "blue", []],
+    ["door_switch:2.l", "pico:GND.5", "black", []]
+  ],
+  "dependencies": {}
+}
