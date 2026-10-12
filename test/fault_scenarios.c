@@ -1,9 +1,4 @@
-/*
- * Predefined scenarios covering nominal operation and a range of single and
- * combined fault conditions across the components. Feel free to edit these
- * or add your own for your own testing. Submissions are evaluated against
- * whatever is committed here at the deadline.
- */
+
 
 #include "fault_scenarios.h"
 
