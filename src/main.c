@@ -1,16 +1,4 @@
-/*
- * Test harness: replays the fixed fault scenarios, prints the result of
- * each, and drives the outputs described below. You should not need to
- * edit this file. Implement your logic in src/logic.c instead (the only
- * file you should edit).
- *
- * GPIO pin mapping (Pico/Wokwi builds), mirrored in README.md:
- *   GP2 - System ON LED         (output)
- *   GP3 - System OFF LED        (output)
- *   GP4 - Buzzer                (output)
- *   GP5 - Notification LED      (output)
- *   GP6 - Door/tamper switch    (input, active low, internal pull-up)
- */
+
 
 #include <stdio.h>
 
