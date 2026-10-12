@@ -1,6 +1,3 @@
-// This is the only file you should edit.
-// AI assistance: helped draft and review these fault checks; thresholds and
-// behaviour still need to be understood and confirmed by the applicant.
 
 #include <math.h>
 
